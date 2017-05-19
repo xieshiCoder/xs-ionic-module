@@ -41,6 +41,10 @@ angular.module('app',[xsIonicModule.xsCityPicker,         //地市滚动选择�
 
 ```
 ### 2、图片视频展示组件
+
+### 3、图片全屏滑动展示组件
+
+### 4、列表图片懒加载
 ![演示](https://github.com/xieshiCoder/xs-ionic-module/blob/master/Screenshot/lazyload.gif)
 ```
 核心代码
@@ -101,7 +105,3 @@ angular.module('app',[xsIonicModule.xsCityPicker,         //地市滚动选择�
   </ion-content>
 </ion-view>
 ```
-### 3、图片全屏滑动展示组件
-
-### 4、列表图片懒加载
-
