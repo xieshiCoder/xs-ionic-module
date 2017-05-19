@@ -40,6 +40,11 @@ angular.module('app',[xsIonicModule.xsCityPicker,         //地市滚动选择�
 <xs-city-picker tag='-' cancel-text='取消' confirm-text='确定' title='地市选择' sel-val='$myController.selVal'></xs-city-picker>
 
 ```
+### 2、图片视频展示组件
+
+### 3、图片全屏滑动展示组件
+
+### 4、列表图片懒加载
 
 
 ## License
