@@ -26,7 +26,7 @@ angular.module('app',[xsIonicModule.xsCityPicker,         //地市滚动选择�
 ###1、地市滚动选择组件使用
 >参数说明：  
 
- ![参数说明](./Screenshot/citypicker1.png)   
+ ![参数说明](./Screenshot/citypicker2.png)   
  ![演示](./Screenshot/citypicker1.gif)     
 ```
 核心代码：
