@@ -45,6 +45,11 @@ angular.module('app',[xsIonicModule.xsCityPicker,         //地市滚动选择�
 ### 3、图片全屏滑动展示组件
 
 ### 4、列表图片懒加载
+>参数说明和演示：  
+delegate-handle ---当前图片所处的ion-content的delegate-handle或者是ion-scroll的delegate-handle  
+img-url ---图片链接  
+*** 注意：xs-img-lazy-load必须设置宽高，否则图片显示异常***  
+
 ![演示](https://github.com/xieshiCoder/xs-ionic-module/blob/master/Screenshot/lazyload.gif)
 ```
 核心代码
