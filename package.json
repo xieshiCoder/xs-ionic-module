@@ -1,0 +1,15 @@
+{
+  "name": "xs-ionic-module",
+  "version": "1.0.1",
+  "description": "自己写的ionic组件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ionic"
+  ],
+  "git repository" : "https://github.com/xieshiCoder/xs-ionic-modules.git",
+  "author": "xieshiCoder",
+  "license": "ISC"
+}
