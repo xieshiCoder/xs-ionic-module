@@ -26,8 +26,7 @@ angular.module('app',[xsIonicModule.xsCityPicker,         //地市滚动选择�
 ###1、地市滚动选择组件使用
 >参数说明：  
 
- ![参数说明](./Screenshot/citypicker2.png)
- ![演示](./Screenshot/citypicker1.gif)     
+ ![参数说明](./Screenshot/citypicker2.png) ![演示](./Screenshot/citypicker1.gif)     
 ```
 核心代码：
 <xs-city-picker tag='-' cancel-text='取消' confirm-text='确定' title='地市选择' sel-val='$myController.selVal'></xs-city-picker>
