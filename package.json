@@ -1,6 +1,6 @@
 {
   "name": "xs-ionic-module",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "自己写的ionic组件",
   "main": "index.js",
   "scripts": {
