@@ -56,6 +56,11 @@ img-url ---图片链接
 <xs-img-lazy-load delegate-handle="newsScroll" img-url="{{mynew.thumbnail_pic_s}}"></xs-img-lazy-load>
 
 示例代码：
+》》》controller：
+$http.get('http://oimam66tq.bkt.clouddn.com/index.json').then((data)=>{
+  this.news = data.data;
+})
+》》》页面：
 <ion-view view-title="登录" class="login-view">
   <style>
     .klitem{
