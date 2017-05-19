@@ -41,12 +41,67 @@ angular.module('app',[xsIonicModule.xsCityPicker,         //地市滚动选择�
 
 ```
 ### 2、图片视频展示组件
+![演示](https://github.com/xieshiCoder/xs-ionic-module/blob/master/Screenshot/lazyload.gif)
+```
+核心代码
+<xs-img-lazy-load delegate-handle="newsScroll" img-url="{{mynew.thumbnail_pic_s}}"></xs-img-lazy-load>
 
+示例代码：
+<ion-view view-title="登录" class="login-view">
+  <style>
+    .klitem{
+      width: 95%;
+      display: flex;
+      height: 120px;
+      margin: 0 auto;
+      border-bottom: 1px solid #ccc;
+    }
+    .klitem .lazy-left{
+      width: 120px;
+    }
+    .klitem .lazy-right{
+      flex:1;
+      padding:10px 0;
+      position: relative;
+    }
+    .klitem .lazy-right .title{
+      font-size: 16px;
+      font-weight: 400;
+      margin: 0;
+      padding: 0;
+      color: #000;
+      position: absolute;
+      left: 0;
+      top:12px;
+    }
+    .klitem .lazy-right .author{
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+    }
+    .klitem .lazy{
+      height: 100px;
+      width: 100px;
+      margin-top: 10px;
+      margin-left: 10px;
+      border: 1px solid #ccc;
+    }
+
+  </style>
+  <ion-content delegate-handle="newsScroll" on-scroll-complete="$login.complete()">
+    <div class='klitem' ng-repeat="mynew in $login.news">
+      <div class="lazy-left">
+        <xs-img-lazy-load class="lazy" delegate-handle="newsScroll" img-url="{{mynew.thumbnail_pic_s}}"></xs-img-lazy-load>
+      </div>
+      <div class="lazy-right">
+        <div class="title">{{mynew.title}}</div>
+        <div class="author">{{mynew.author_name}}</div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+```
 ### 3、图片全屏滑动展示组件
 
 ### 4、列表图片懒加载
 
-
-## License
-
-ISC
