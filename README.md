@@ -57,7 +57,7 @@ img-url ---图片链接
 
 示例代码：
 》》》controller：
-complete(){
+complete(){//滚动完成后通知当前在屏幕内的图片进行加载
   this.$scope.$broadcast('xsImg.LoadImg');
 }
 $http.get('http://oimam66tq.bkt.clouddn.com/index.json').then((data)=>{
