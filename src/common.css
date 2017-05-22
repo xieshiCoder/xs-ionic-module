@@ -1,0 +1,221 @@
+/********滚动选择组件开始********/
+.xs-picker{
+    z-index: 1;
+    background-color: rgba(38,38,38,0.5);
+}
+.xs-picker .picker-bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+.xs-picker .main-box{
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 3;
+}
+.xs-picker .main-box .nav-box{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+}
+.xs-picker .main-box .nav-box:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transform: scale(1,.5);
+    background: #ccc;
+}
+.xs-picker .main-box .nav-box .left-button{
+    padding-left: 10px;
+    float: left;
+}
+.xs-picker .main-box .nav-box h4{
+    display: inline-block;
+}
+.xs-picker .main-box .nav-box .right-button{
+    padding-right: 10px;
+    float: right;
+}
+.xs-picker .main-box .main{
+    position:relative;
+    width: 100%;
+    height: 210px;
+}
+.xs-picker .main-box .main .picker-center-highlight{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    pointer-events: none;
+}
+.xs-picker .main-box .main .picker-center-highlight:before {
+    height: 100%;
+    margin: 0 auto;
+    z-index: 3;
+    background-image: -webkit-linear-gradient(top,hsla(0,0%,100%,.95),hsla(0,0%,100%,.6)),-webkit-linear-gradient(bottom,hsla(0,0%,100%,.95),hsla(0,0%,100%,.6));
+    background-image: linear-gradient(180deg,hsla(0,0%,100%,.95),hsla(0,0%,100%,.6)),linear-gradient(0deg,hsla(0,0%,100%,.95),hsla(0,0%,100%,.6));
+    background-position: top,bottom;
+    background-size: 100% 90px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    width: 100%;
+}
+.xs-picker .main-box .main .picker-center-highlight:after {
+    content: '';
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top:-16px;
+    z-index: 3;
+    background-image: -webkit-linear-gradient(top,#d0d0d0,#d0d0d0,transparent,transparent),-webkit-linear-gradient(bottom,#d0d0d0,#d0d0d0,transparent,transparent);
+    background-image: linear-gradient(180deg,#d0d0d0,#d0d0d0,transparent,transparent),linear-gradient(0deg,#d0d0d0,#d0d0d0,transparent,transparent);
+    background-position: top,bottom;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+}
+.xs-picker .main-box .main .picker-center-highlight .highlight-tag{
+    flex : 1;
+    -webkit-flex : 1;
+    position: relative;
+    height: 30px;
+    margin-top: 90px;
+}
+.xs-picker .main-box .main .picker-center-highlight .highlight-tag2{
+    flex : 2;
+    -webkit-flex: 2;
+}
+.xs-picker .main-box .main .picker-center-highlight .highlight-tag .msg-tag{
+    position: absolute;
+    right: 0;
+    top:5px;
+    font-size: 18px;
+}
+.xs-picker .main-box .main .main-workarea{
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+}
+.xs-picker .main-box .main .main-workarea .picker-col{
+    flex: 1;
+    -webkit-flex: 1;
+}
+.xs-picker .main-box .main .main-workarea .picker-col-2{
+    flex: 2;
+    -webkit-flex: 2;
+}
+.xs-picker .main-box .main .main-workarea .ionic-scroll{
+    height: 210px;
+}
+.xs-picker .main-box .main .main-workarea .ionic-scroll .scroll{
+    margin: 90px 0;
+}
+.xs-picker .main-box .main .main-workarea .picker-col li{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 30px;
+}
+/********滚动选择组件结束********/
+/********图片全屏滚动预览组件开始********/
+.img-slide{
+    background: #000;
+}
+.img-slide .bar.bar-assertive{
+    border:none;
+    background: transparent;
+}
+.img-slide .imgs-container{
+    width: 100%;
+    height: 80%;
+    top: 10%;
+    overflow: hidden;
+}
+.img-slide .imgs-container .slider,.img-slide .imgs-container .slider .slider-slides .slider-slide{
+    height: 100%;
+}
+.img-slide .imgs-container .slider .slider-slides .slider-slide img{
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    vertical-align: middle;
+}
+.img-slide .imgs-container .slider .slider-slides .slider-slide span{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+/********图片全屏滚动预览组件结束********/
+/***********图片懒加载开始***********/
+xs-img-lazy-load{
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+}
+xs-img-lazy-load:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    background-color: #ccc;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+xs-img-lazy-load.active:after{
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    height: 20%;
+    width: 20%;
+    border-radius: 100%;
+    border-bottom-color: transparent;
+    border: 1px solid #fff;
+    background: 0 0!important;
+    border-bottom-color: transparent;
+    -webkit-animation: xs-lazy-rotate .75s 0s linear infinite;
+    animation: xs-lazy-rotate .75s 0s linear infinite;
+    z-index: 2;
+}
+xs-img-lazy-load img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 3;
+}
+@-webkit-keyframes xs-lazy-rotate{
+    0%{
+        -webkit-transform:rotate(0)scale(1);
+        transform:rotate(0)scale(1)
+    }
+    50%{
+        -webkit-transform:rotate(180deg)scale(0.6);
+        transform:rotate(180deg)scale(0.6)
+    }
+    100%{
+        -webkit-transform:rotate(360deg)scale(1);
+        transform:rotate(360deg)scale(1)
+    }
+}
+/***********图片懒加载结束***********/
