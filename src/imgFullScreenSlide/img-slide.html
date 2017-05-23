@@ -1,21 +1,13 @@
-<ion-modal-view class="img-slide">
+<ion-modal-view class="img-slide" on-touch ='vm.touch()' on-drag="vm.drag()" on-release="vm.release()">
     <style>
 
     </style>
-    <ion-header-bar class="bar-assertive">
-        <div class="buttons">
-            <button class="button back-button header-item button-clear" ng-click="vm.closeModal()">
-                <i class="icon ion-arrow-left-c"></i>
-            </button>
+    <div class="slidebg">
+        <div class="bg-num"  ng-click="vm.closeModal()">
+            <span>{{vm.navNum}}</span>
         </div>
-        <h1 class="title"></h1>
-        <div class="buttons">
-            <button class="button back-button header-item button-clear">
-                {{vm.navNum}}
-            </button>
-        </div>
-    </ion-header-bar>
-    <ion-content class="imgs-container" overflow-scroll="true">
+    </div>
+    <ion-content class="imgs-container" overflow-scroll="true" ng-click="vm.closeModal()">
         <ion-slide-box show-pager="false" on-slide-changed="vm.slideHasChanged($index)" delegate-handle="imgslide">
             <ion-slide ng-repeat="imgUrl in vm.imgArr">
                 <img ng-src="{{imgUrl}}"><span></span>
