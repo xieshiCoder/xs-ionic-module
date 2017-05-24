@@ -79,32 +79,39 @@ function xsCityPicker(cityPickerService,$ionicModal,$timeout,$ionicScrollDelegat
             let animation = function(handle,step){
                 let lis = angular.element(document.querySelector("ion-scroll[delegate-handle='"+handle+"']")).find('li');
                 for(let k=0,i=step-3;i<=step+3;i++){
-                    let fs = "";
+                    let fs = "",color = '';
                     if(lis[i]){
                         switch (k){
                             case 0:
                                 fs = 'scale(0.7, 0.7)';
+                                color = '#000';
                                 break;
                             case 1:
                                 fs = 'scale(0.8, 0.8)';
+                                color = '#000';
                                 break;
                             case 2:
                                 fs = 'scale(0.9, 0.9)';
+                                color = '#000';
                                 break;
                             case 3:
                                 fs = 'scale(1, 1)';
+                                color = '#47a7d7';
                                 break;
                             case 4:
                                 fs = 'scale(0.9, 0.9)';
+                                color = '#000';
                                 break;
                             case 5:
                                 fs = 'scale(0.8, 0.8)';
+                                color = '#000';
                                 break;
                             case 6:
                                 fs = 'scale(0.7, 0.7)';
+                                color = '#000';
                                 break;
                         }
-                        angular.element(lis[i]).css({'transform':fs,'transition-duration':'0.4s'});
+                        angular.element(lis[i]).css({'transform':fs,'transition-duration':'0.4s','color':color});
                     }
                     k++;
                 }
