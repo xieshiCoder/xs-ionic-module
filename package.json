@@ -13,6 +13,9 @@
     "imgFullScreenSlide",
     "imgLazyLoad"
   ],
+  "dependencies": {
+    "date-utils": "^1.2.21"
+  },
   "repository" : {
     "type" : "git",
     "url" : "https://github.com/xieshiCoder/xs-ionic-module.git"

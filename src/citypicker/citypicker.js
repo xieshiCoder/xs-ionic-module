@@ -1,6 +1,7 @@
 /**
  * Created by xieshi on 2017/5/19.
  */
+var uuid = require('uuid');
 function xsCityPicker(cityPickerService,$ionicModal,$timeout,$ionicScrollDelegate){
     return {
         scope : {
@@ -19,6 +20,9 @@ function xsCityPicker(cityPickerService,$ionicModal,$timeout,$ionicScrollDelegat
             vm.confirmText = scope.confirmText || '确认';
             vm.title = scope.title || '地市选择';
             vm.sources = cityPickerService.getCitys();
+            vm.scroll1 = uuid.v1().replace(/-/g,'');
+            vm.scroll2 = uuid.v1().replace(/-/g,'');
+            vm.scroll3 = uuid.v1().replace(/-/g,'');
             scope.modal = $ionicModal.fromTemplate(require('./city-picker.html'), {
                 scope: scope,
             });
@@ -59,12 +63,12 @@ function xsCityPicker(cityPickerService,$ionicModal,$timeout,$ionicScrollDelegat
                     scope.modal.show();
                 }
                 initData();
-                $ionicScrollDelegate.$getByHandle('scroll1').scrollTo(0, vm.scrollIndex1 * 30, true);
-                $ionicScrollDelegate.$getByHandle('scroll2').scrollTo(0, vm.scrollIndex2 * 30, true);
-                $ionicScrollDelegate.$getByHandle('scroll3').scrollTo(0, vm.scrollIndex3 * 30, true);
-                animation('scroll1',vm.scrollIndex1);
-                animation('scroll2',vm.scrollIndex2);
-                animation('scroll3',vm.scrollIndex3);
+                $ionicScrollDelegate.$getByHandle(vm.scroll1).scrollTo(0, vm.scrollIndex1 * 30, true);
+                $ionicScrollDelegate.$getByHandle(vm.scroll2).scrollTo(0, vm.scrollIndex2 * 30, true);
+                $ionicScrollDelegate.$getByHandle(vm.scroll3).scrollTo(0, vm.scrollIndex3 * 30, true);
+                animation(vm.scroll1,vm.scrollIndex1);
+                animation(vm.scroll2,vm.scrollIndex2);
+                animation(vm.scroll3,vm.scrollIndex3);
             }
             vm.close = function(){
                 $timeout(function() {
@@ -126,7 +130,7 @@ function xsCityPicker(cityPickerService,$ionicModal,$timeout,$ionicScrollDelegat
                 var step = Math.round(top / 30);
                 animation(val,step);
             };
-            vm.release = function(val){
+            vm.release = function(val,dex){
                 let height = $ionicScrollDelegate.$getByHandle(val).getScrollView().__maxScrollTop;
                 let top = $ionicScrollDelegate.$getByHandle(val).getScrollPosition().top;
                 top=top<0?1:top;
@@ -135,11 +139,12 @@ function xsCityPicker(cityPickerService,$ionicModal,$timeout,$ionicScrollDelegat
                 }
                 var step = Math.round(top / 30);
                 $ionicScrollDelegate.$getByHandle(val).scrollTo(0, step * 30, true);
-                let index = Number(val.substr(-1));
+                let index = Number(dex);
                 rectify(index,step);
                 for(let i=index+1;i<=3;i++){
                     $timeout(()=>{
-                        let handle = 'scroll'+i;
+                        let scrolll = 'scroll'+i;
+                        let handle = vm[scrolll];
                         $ionicScrollDelegate.$getByHandle(handle).scrollTo(0, 0, true);
                         animation(handle,0);
                     },100);

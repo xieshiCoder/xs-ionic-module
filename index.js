@@ -5,9 +5,11 @@ require('./src/common.css');
 var xsCityPicker = require('./src/citypicker/citypicker');
 var xsImgSlide = require('./src/imgFullScreenSlide/imgFullScreenSlide');
 var xsImgLazyLoad = require('./src/imgLazyLoad/imgLazyLoad');
+var xsDatePicker = require('./src/datepicker')
 var xsIonicModule = {
     xsCityPicker : xsCityPicker,
     xsImgSlide : xsImgSlide,
-    xsImgLazyLoad : xsImgLazyLoad
+    xsImgLazyLoad : xsImgLazyLoad,
+    xsDatePicker : xsDatePicker
 };
 module.exports = xsIonicModule;

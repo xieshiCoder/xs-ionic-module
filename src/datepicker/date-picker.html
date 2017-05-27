@@ -1,0 +1,57 @@
+<ion-modal-view class="xs-picker date-picker">
+  <div class="picker-bg" ng-click="linkvm.close()"></div>
+  <div class="main-box">
+    <div class="nav-box">
+      <div class="left-button default-color" ng-click="linkvm.close()">{{ctrl.vm.cancelText}}</div>
+      <h4>{{ctrl.vm.title}}</h4>
+      <div class="right-button default-color" ng-click="linkvm.confirm()">{{ctrl.vm.confirmText}}</div>
+    </div>
+    <div class="main">
+      <div class="picker-tags">
+        <div class="picker-tag">年</div>
+        <div class="picker-tag">月</div>
+        <div class="picker-tag">日</div>
+        <div class="picker-tag">时</div>
+        <div class="picker-tag">分</div>
+      </div>
+      <div class="picker-center-highlight"></div>
+      <div class="main-workarea">
+        <div class="picker-col">
+          <ion-scroll delegate-handle='{{ctrl.vm.scroll1}}' scrollbar-y="false" on-drag="ctrl.swipe('{{ctrl.vm.scroll1}}')" on-release="ctrl.release('{{ctrl.vm.scroll1}}',1)" on-scroll-complete="ctrl.release('{{ctrl.vm.scroll1}}',1)">
+            <ul>
+              <li ng-repeat="year in ctrl.vm.years">{{year}}</li>
+            </ul>
+          </ion-scroll>
+        </div>
+        <div class="picker-col">
+          <ion-scroll delegate-handle='{{ctrl.vm.scroll2}}' scrollbar-y="false" on-drag="ctrl.swipe('{{ctrl.vm.scroll2}}')" on-release="ctrl.release('{{ctrl.vm.scroll2}}',2)" on-scroll-complete="ctrl.release('{{ctrl.vm.scroll2}}',2)">
+            <ul>
+              <li ng-repeat="month in ctrl.vm.months">{{month}}</li>
+            </ul>
+          </ion-scroll>
+        </div>
+        <div class="picker-col">
+          <ion-scroll delegate-handle='{{ctrl.vm.scroll3}}' scrollbar-y="false" on-drag="ctrl.swipe('{{ctrl.vm.scroll3}}')" on-release="ctrl.release('{{ctrl.vm.scroll3}}',3)" on-scroll-complete="ctrl.release('{{ctrl.vm.scroll3}}',3)">
+            <ul>
+              <li ng-repeat="day in ctrl.vm.days">{{day}}</li>
+            </ul>
+          </ion-scroll>
+        </div>
+        <div class="picker-col">
+          <ion-scroll delegate-handle='{{ctrl.vm.scroll4}}' scrollbar-y="false" on-drag="ctrl.swipe('{{ctrl.vm.scroll4}}')" on-release="ctrl.release('{{ctrl.vm.scroll4}}',4)" on-scroll-complete="ctrl.release('{{ctrl.vm.scroll4}}',4)">
+            <ul>
+              <li ng-repeat="hour in ctrl.vm.hours">{{hour}}</li>
+            </ul>
+          </ion-scroll>
+        </div>
+        <div class="picker-col">
+          <ion-scroll delegate-handle='{{ctrl.vm.scroll5}}' scrollbar-y="false" on-drag="ctrl.swipe('{{ctrl.vm.scroll5}}')" on-release="ctrl.release('{{ctrl.vm.scroll5}}',5)" on-scroll-complete="ctrl.release('{{ctrl.vm.scroll5}}',5)">
+            <ul>
+              <li ng-repeat="minute in ctrl.vm.minutes">{{minute}}</li>
+            </ul>
+          </ion-scroll>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-modal-view>
