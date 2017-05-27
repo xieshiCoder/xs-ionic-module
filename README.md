@@ -46,7 +46,11 @@ angular.module('app',[xsIonicModule.xsCityPicker,         //地市滚动选择�
 >参数说明和演示：
 delegate-handle ---当前图片所处的ion-content的delegate-handle或者是ion-scroll的delegate-handle
 img-url ---图片链接
-<h4 style='color:red;padding:0;margin:0'>注意：xs-img-lazy-load必须设置宽高，否则图片显示异常</h4>
+<h4 style='color:red;padding:0;margin:0'>
+注意：<br/>
+    1、xs-img-lazy-load必须设置宽高，否则图片显示异常
+    2、xs-img-lazy-load的定位父级offsetParent必须是ion-content或ion-scroll，所以写布局的时候一定要注意慎用position
+</h4>
 
 ![演示](https://github.com/xieshiCoder/xs-ionic-module/blob/master/Screenshot/lazyload.gif)
 ```
