@@ -37,19 +37,22 @@ angular.module('app',[xsIonicModule.xsCityPicker,         //地市滚动选择�
  ![参数说明](https://github.com/xieshiCoder/xs-ionic-module/blob/master/Screenshot/citypicker2.png) ![演示](https://github.com/xieshiCoder/xs-ionic-module/blob/master/Screenshot/citypicker1.gif)
 ```
 核心代码：
-<xs-city-picker tag='-' cancel-text='取消' confirm-text='确定' title='地市选择' sel-val='$myController.selVal'></xs-city-picker>
+<xs-city-picker source='$myController.source' tag='-' cancel-text='取消' confirm-text='确定' title='地市选择' sel-val='$myController.selVal'></xs-city-picker>
 
 ```
 ### 2、日期滚动选择组件使用
 >参数说明和演示：
 
-![参数说明](https://github.com/xieshiCoder/xs-ionic-module/blob/master/Screenshot/datepicker2.png)![演示](https://github.com/xieshiCoder/xs-ionic-module/blob/master/Screenshot/datepicker1.gif)
+![参数说明](https://github.com/xieshiCoder/xs-ionic-module/blob/master/Screenshot/datepicker2.png)  ![演示](https://github.com/xieshiCoder/xs-ionic-module/blob/master/Screenshot/datepicker1.gif)
 ```
 核心代码：
 <xs-date-picker cancel-text='取消' confirm-text='确定' title='地市选择' sel-val='$myController.selVal'></xs-date-picker>
 
 ```
 ### 3、图片全屏滑动展示组件
+
+------ 敬请期待
+
 
 ### 4、列表图片懒加载
 >参数说明和演示：
