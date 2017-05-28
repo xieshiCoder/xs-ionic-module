@@ -42,6 +42,7 @@ angular.module('app',[xsIonicModule.xsCityPicker,         //地市滚动选择�
 ```
 ### 2、日期滚动选择组件使用
 >参数说明和演示：
+
 ![参数说明](https://github.com/xieshiCoder/xs-ionic-module/blob/master/Screenshot/datepicker2.png)![演示](https://github.com/xieshiCoder/xs-ionic-module/blob/master/Screenshot/datepicker1.gif)
 ```
 核心代码：
