@@ -5,6 +5,7 @@ var uuid = require('uuid');
 function xsCityPicker(cityPickerService,$ionicModal,$timeout,$ionicScrollDelegate){
     return {
         scope : {
+            source : '=source',
             tag : '@tag',
             title: '@title',
             cancelText : '@cancelText',
@@ -14,12 +15,12 @@ function xsCityPicker(cityPickerService,$ionicModal,$timeout,$ionicScrollDelegat
         template : '<span ng-click="vm.show()">{{vm.showValue}}</span>',
         link : function(scope,element,attrs){
             var vm = scope.vm = {};
+            vm.sources = scope.source || cityPickerService.getCitys();//设置数据源，默认从cityPickerService中获取
             vm.tag = scope.tag || '-';//地市之间的连接符
             vm.showValue = scope.selVal || '请选择地市';//显示的文字
             vm.cancelText = scope.cancelText || '取消';
             vm.confirmText = scope.confirmText || '确认';
             vm.title = scope.title || '地市选择';
-            vm.sources = cityPickerService.getCitys();
             vm.scroll1 = uuid.v1().replace(/-/g,'');
             vm.scroll2 = uuid.v1().replace(/-/g,'');
             vm.scroll3 = uuid.v1().replace(/-/g,'');
