@@ -1,6 +1,6 @@
 
 # ionic公用组件
->本项目基于基于angular1.5.3和ionic1.3.2进行开发
+>本项目基于基于angular1.5.3和ionic1.3.2进行开发,其中的组件适用于ionic+es6开发的项目。当然你也可以把代码clone下来，自己修改成es5的代码。
 
 ## [github地址](https://github.com/xieshiCoder/xs-ionic-module)
 
