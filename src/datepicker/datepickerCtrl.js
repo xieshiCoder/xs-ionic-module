@@ -143,6 +143,7 @@ module.exports = class XsDatePickerCtr{
     }
     var step = Math.round(top / 30);
     this.$ionicScrollDelegate.$getByHandle(val).scrollTo(0, step * 30, true);
+    this.animation(val,step);
     let index = Number(dex);
     this.rectify(index,step);
 

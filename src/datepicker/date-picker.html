@@ -30,7 +30,7 @@
             </ul>
           </ion-scroll>
         </div>
-        <div class="picker-col">
+        <div class="picker-col day-col">
           <ion-scroll delegate-handle='{{ctrl.vm.scroll3}}' scrollbar-y="false" on-drag="ctrl.swipe('{{ctrl.vm.scroll3}}')" on-release="ctrl.release('{{ctrl.vm.scroll3}}',3)" on-scroll-complete="ctrl.release('{{ctrl.vm.scroll3}}',3)">
             <ul>
               <li ng-repeat="day in ctrl.vm.days">{{day}}</li>
