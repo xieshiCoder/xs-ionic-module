@@ -10,21 +10,21 @@
             <div class="picker-center-highlight"></div>
             <div class="main-workarea">
                 <div class="picker-col">
-                    <ion-scroll delegate-handle='{{vm.scroll1}}' scrollbar-y="false" on-drag="vm.swipe('{{vm.scroll1}}')" on-release="vm.release('{{vm.scroll1}}',1)">
+                    <ion-scroll delegate-handle='{{vm.scroll1}}' scrollbar-y="false" on-drag="vm.swipe('{{vm.scroll1}}')" on-release="vm.release('{{vm.scroll1}}',1)" on-scroll-complete="vm.release('{{vm.scroll1}}',1)">
                         <ul>
                             <li ng-repeat="province in vm.sources">{{province.name}}</li>
                         </ul>
                     </ion-scroll>
                 </div>
                 <div class="picker-col">
-                    <ion-scroll delegate-handle='{{vm.scroll2}}' scrollbar-y="false" on-drag="vm.swipe('{{vm.scroll2}}')" on-release="vm.release('{{vm.scroll2}}',2)">
+                    <ion-scroll delegate-handle='{{vm.scroll2}}' scrollbar-y="false" on-drag="vm.swipe('{{vm.scroll2}}')" on-release="vm.release('{{vm.scroll2}}',2)" on-scroll-complete="vm.release('{{vm.scroll2}}',2)">
                         <ul>
                             <li ng-repeat="city in vm.selScroll1.sub">{{city.name}}</li>
                         </ul>
                     </ion-scroll>
                 </div>
                 <div class="picker-col picker-col-2">
-                    <ion-scroll delegate-handle='{{vm.scroll3}}' scrollbar-y="false" on-drag="vm.swipe('{{vm.scroll3}}')" on-release="vm.release('{{vm.scroll3}}',3)">
+                    <ion-scroll delegate-handle='{{vm.scroll3}}' scrollbar-y="false" on-drag="vm.swipe('{{vm.scroll3}}')" on-release="vm.release('{{vm.scroll3}}',3)" on-scroll-complete="vm.release('{{vm.scroll3}}',3)">
                         <ul>
                             <li ng-repeat="region in vm.selScroll2.sub">{{region.name}}</li>
                         </ul>

@@ -139,6 +139,7 @@ function xsCityPicker(cityPickerService,$ionicModal,$timeout,$ionicScrollDelegat
                 }
                 var step = Math.round(top / 30);
                 $ionicScrollDelegate.$getByHandle(val).scrollTo(0, step * 30, true);
+                animation(val,step);
                 let index = Number(dex);
                 rectify(index,step);
                 for(let i=index+1;i<=3;i++){
