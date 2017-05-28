@@ -137,6 +137,18 @@
 .xs-picker .main-box .main .main-workarea .picker-col{
     flex: 1;
     -webkit-flex: 1;
+    position: relative;
+}
+.xs-picker .main-box .main .main-workarea .day-col:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    border: #ccc;
+    -webkit-transform: scale(1,.5);
+    transform: scale(1,.5);
 }
 .xs-picker .main-box .main .main-workarea .picker-col-2{
     flex: 2;
