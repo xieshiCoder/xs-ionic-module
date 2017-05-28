@@ -24,6 +24,7 @@ import xsIonicModule from 'xs-ionic-module';
 在需要的模块中对组件进行依赖
 例：
 angular.module('app',[xsIonicModule.xsCityPicker,         //地市滚动选择组件
+  xsIonicModule.xsDatePicker,         //日期滚动选择组件
   xsIonicModule.xsImgSlide,           //图片全屏滑动展示组件
   xsIonicModule.xsImgLazyLoad])       //列表图片懒加载
 ```
@@ -39,10 +40,17 @@ angular.module('app',[xsIonicModule.xsCityPicker,         //地市滚动选择�
 <xs-city-picker tag='-' cancel-text='取消' confirm-text='确定' title='地市选择' sel-val='$myController.selVal'></xs-city-picker>
 
 ```
+### 2、日期滚动选择组件使用
+>参数说明和演示：
+![参数说明](https://github.com/xieshiCoder/xs-ionic-module/blob/master/Screenshot/datepicker2.png)![演示](https://github.com/xieshiCoder/xs-ionic-module/blob/master/Screenshot/datepicker1.gif)
+```
+核心代码：
+<xs-date-picker cancel-text='取消' confirm-text='确定' title='地市选择' sel-val='$myController.selVal'></xs-date-picker>
 
-### 2、图片全屏滑动展示组件
+```
+### 3、图片全屏滑动展示组件
 
-### 3、列表图片懒加载
+### 4、列表图片懒加载
 >参数说明和演示：
 delegate-handle ---当前图片所处的ion-content的delegate-handle或者是ion-scroll的delegate-handle
 img-url ---图片链接
