@@ -59,8 +59,6 @@ current-index   ---当前图片在数组中的索引，从0开始
 <xs-img-slide img-arr="$myController.imgs" current-index="1"></xs-img-slide>
 
 ```
-https://my.oschina.net/bosscheng/blog/512388
-https://www.oschina.net/search?scope=blog&q=angular
 
 ### 4、列表图片懒加载
 >参数说明和演示：  
