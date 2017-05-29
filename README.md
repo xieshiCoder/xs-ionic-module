@@ -50,12 +50,20 @@ angular.module('app',[xsIonicModule.xsCityPicker,         //地市滚动选择�
 
 ```
 ### 3、图片全屏滑动展示组件
+>参数说明和演示：  
+img-arr   ---图片数组
+current-index   ---当前图片在数组中的索引，从0开始  
+![演示](https://github.com/xieshiCoder/xs-ionic-module/blob/master/Screenshot/imgslide2.gif)
+```
+核心代码:  
+<xs-img-slide img-arr="$myController.imgs" current-index="1"></xs-img-slide>
 
------- 敬请期待
-
+```
+https://my.oschina.net/bosscheng/blog/512388
+https://www.oschina.net/search?scope=blog&q=angular
 
 ### 4、列表图片懒加载
->参数说明和演示：
+>参数说明和演示：  
 delegate-handle ---当前图片所处的ion-content的delegate-handle或者是ion-scroll的delegate-handle
 img-url ---图片链接
 <h4>注意：</h4>
