@@ -42,7 +42,7 @@ module.exports = class XsDatePickerCtr{
     this.vm.selScroll5 = dateformat(date,'MM');
     this.vm.showValue = this.$scope.selVal = dateformat(date,'yyyy-mm-dd HH:MM');
     let thisMonth = Number(this.vm.selScroll2);
-    let thisYear = Number(this.vm.selScroll1);
+    let thisYear = Number(dateformat(new Date(),'yyyy'));
     this.vm.years = [];
     for(let i=-5;i<6;i++){
       this.vm.years.push(thisYear+i+'');
