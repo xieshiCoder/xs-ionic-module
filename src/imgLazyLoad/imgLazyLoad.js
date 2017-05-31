@@ -14,8 +14,10 @@ function xsImgLazyLoad($ionicScrollDelegate,$timeout){
         template :
             `<img ng-src="{{vm.src}}" xs-error-src>
                 <div class="xs-lazy-load">
-                    <div class="xs-lazy-rond">
-                        <div class="xs-lazy-test"></div>
+                    <div class="xs-lazy-area">
+                        <div class="xs-lazy-rond">
+                            <div class="xs-lazy-test"></div>
+                        </div>
                     </div>
                     <span></span>
                 </div>`,
